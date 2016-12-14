@@ -16,4 +16,12 @@ these codes into coarser-grain categories.
 Once established, these categories represent a new dimension upon which standard reporting
 may be run (e.g. `select sum(cost),category from outpatient_billing group by category`).
 
-The rules by which these categories are 
+
+## Current Mappings Supported:
+### From Source
+The rules by which these categories are established can be found in many publications.  Our current source for this library is: 
+  * [Health Care Cost and Utilization Report: 2011](http://www.healthcostinstitute.org/files/HCCI_HCCUR2011.pdf)
+
+### Mapping Type
+Currently we support:
+  * DRG -> 
