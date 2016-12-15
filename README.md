@@ -10,8 +10,8 @@ Medical claims data often comes with a set of codes:
   * DRG Codes
 
 These codes are useful for allowing health systems and payers to understand cost.
-However, these codes are at too granular a level, so there is a need to agglomerate
-these codes into coarser-grain categories.
+However as these codes are at a granular level sometimes there is a need to agglomerate
+them into coarser-grain categories.
 
 Once established, these categories represent a new dimension upon which standard reporting
 may be run (e.g. `select sum(cost),category from outpatient_billing group by category`).
@@ -37,7 +37,17 @@ Currently we support:
   * HCPC -> Outpatient Service Category
   * HCPC -> Professional Services Category (for carrier files) 
 
-## Function Mapping
+## Function Mapping and API
+
+The following tables list the relevant python functions found in `categorizer.py` that you, as a developer, will need.  All you need to do is pass in your appropriate code.
+
+The API is fairly simple and relies on strings:
+```
+category = carrier_categorizer_by_hcpc("0016T")
+```
+
+The above snippet of code will return the category `Surgery` (as a string) as per the HCIC2011 specification.
+
 ### DRG
 <table>
   <th>Source</th>
@@ -45,8 +55,8 @@ Currently we support:
   <th>Medical Diagnostic Category</th>
   <tr>
     <td>HCIC2011</td>
-    <td>inpatient_service_category_by_drg(drg)</td>
-    <td>inpatient_mdc_category_by_drg(drg)</td>
+    <td><code>inpatient_service_category_by_drg(drg)</code></td>
+    <td><code>inpatient_mdc_category_by_drg(drg)</code></td>
   </tr>
 </table>
 
@@ -57,7 +67,11 @@ Currently we support:
   <th>Professional Services Category</th>
   <tr>
     <td>HCIC2011</td>
-    <td>outpatient_categorizer_by_hcpc(hcpc)</td>
-    <td>carrier_categorizer_by_hcpc(hcpc)</td>
+    <td><code>outpatient_categorizer_by_hcpc(hcpc)</code></td>
+    <td><code>carrier_categorizer_by_hcpc(hcpc)</code></td>
   </tr>
 </table>
+
+## Lower level API and Creating and Contributing your own Mapping
+
+![ yourown ](creating-your-own.png)
