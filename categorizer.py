@@ -343,7 +343,7 @@ master_carrier_rules_dictionary = [
   },
   {
   'category' : "Other Professional Services",
-  'individual_codes':  [( "99465"),( 99499)],
+  'individual_codes':  [( "99465"),( "99499")],
   'code_ranges': [("36415","36416"),
                   ( "90935","90999"),
                   ( "91000","91299"),
