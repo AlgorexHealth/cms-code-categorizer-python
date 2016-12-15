@@ -574,7 +574,7 @@ def run_carrier():
 
 #run_carrier()
 #run_outpatient()
-run_inpatient()
+#run_inpatient()
 
 def test():
   print carrier_categorizer_by_hcpc("0016T"), " and should be Surgery"
