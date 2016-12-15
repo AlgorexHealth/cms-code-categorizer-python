@@ -558,17 +558,17 @@ def process_inpatient_line(line):
   print ','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)])
 
 def run_outpatient():
-  file = open('outpatient-hcpc.csv', 'r')
+  file = open('test/data/outpatient-hcpc.csv', 'r')
   for line in file:
     process_outpatient_line(line)
 
 def run_inpatient():
-  file = open('inpatient-drg.csv','r')
+  file = open('test/data/inpatient-drg.csv','r')
   for line in file:
     process_inpatient_line(line)
 
 def run_carrier():
-  file = open('carrier-hcpc.csv', 'r')
+  file = open('test/data/carrier-hcpc.csv', 'r')
   for line in file:
     process_carrier_line(line)
 
