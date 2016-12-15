@@ -73,5 +73,51 @@ The above snippet of code will return the category `Surgery` (as a string) as pe
 </table>
 
 ## Lower level API and Creating and Contributing your own Mapping
+If you have your own mappings you want to create, then there are lower-level APIs that may be of use to you.
+
+In the below snapshot, taken from [Health Care Cost and Utilization Report: 2011](http://www.healthcostinstitute.org/files/HCCI_HCCUR2011.pdf), you can see the definition of the category 'Other Professional Services' (in blue) includes both individual HCPC codes (in green) and HCPC ranges (in yellow).  
+
+This highlights the nature of most mappings, and is the key to creating your own categorizer function.
 
 ![ yourown ](creating-your-own.png)
+
+The takeaway here is that you need to 
+
+1. create your own mapping with python dictionaries that have the three things we've just highlighted:
+    1. a category name
+    2. a list of individual codes
+    3. a list of ranges
+2. utilize the `categorizer_by_rules` higher-order function to generate your own function.
+
+## Example
+
+```python
+my_mapping = [
+  {
+  'category' : "Sublime Medical Arcana",
+  'individual_codes':  [( "99465"),( "99499")],
+  'code_ranges': [("36415","36416"),
+                  ( "PA01X","PA99X"),  # LOOK at THIS RANGE
+                  ( "V5008","V5299"),
+                  ( "V5336","V5364"),
+                  ( "W0000","ZZZZZ")]
+  },
+  # .... you can have MANY categories in your own mapping
+]
+
+
+# categorizer_by_rules is a higher-order function that takes an array
+# of dictionares and returns another function, the actual function,
+# that does the categorization based on the rules captured in
+# the dictionary set
+mycategorizer = categorizer_by_rules(my_mapping)
+
+# Now I can use mycategorizer 
+# to get the category for the code PA11X
+# which is in the range PA01X to PA99X
+c = mycategorizer("PA11X")
+
+# c will be the string "Sublime Medical Arcana"
+# because "PA11X" was found in one of the ranges 
+# listed in the code_ranges slot of the dictionary
+```
