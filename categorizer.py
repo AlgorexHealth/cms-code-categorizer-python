@@ -298,7 +298,7 @@ master_carrier_rules_dictionary = [
   },
   {
   'category' : "Inpatient Visits",
-  'individual_codes': [( 99477)],
+  'individual_codes': [( "99477")],
   'code_ranges': [("99217","99239"),( "99304","99340"),( "99478","99480")]
   },
   {
