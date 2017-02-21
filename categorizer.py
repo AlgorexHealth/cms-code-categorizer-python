@@ -1,5 +1,7 @@
 def arr_of_t_to_tuple_of_a(smaller):
-  def r((ls,vs,us),(l,v,u)):
+  def r(first,second):
+    (ls,vs,us) = first
+    (l,v,u) = second
     ls.append(l)
     vs.append(v)
     us.append(u)
@@ -7,7 +9,8 @@ def arr_of_t_to_tuple_of_a(smaller):
   ret = reduce(r,smaller,([],[],[]))
   return ret
 
-def look_for_alpha_mask(val,(lower,upper)):
+def look_for_alpha_mask(val,lowerupper):
+  (lower,upper) = lowerupper
   # 1) first kick out values that are not within
   # the alpha lower/upper bounds. As an example:
   #  v= "10000" will be kicked out of a range of
@@ -38,7 +41,8 @@ def look_for_alpha_mask(val,(lower,upper)):
   newlower,newval,newupper = arr_of_t_to_tuple_of_a(smaller)
   return (True,(newlower,newval,newupper))  
 
-def normalize_val_and_ranges(val,(lower,upper)):
+def normalize_val_and_ranges(val,lowerupper):
+  (lower,upper) = lowerupper
   def make_char(l,v,u):
     l = '0' if l==None else l
     u = '0' if u==None else u
@@ -56,7 +60,8 @@ def normalize_val_and_ranges(val,(lower,upper)):
 # we also assume that the lower and upper bounds are valid
 #  (e.g.  ("ATP02","ATP02")  are valid while
 #         ("0TP02","ATP02") are not
-def is_in_range(val,(lower,upper)):
+def is_in_range(val,lowerupper):
+  (lower,upper) = lowerupper
   (nval,(nlower,nupper)) = normalize_val_and_ranges(val,(lower,upper))
   (c,(newlower,newval,newupper)) = look_for_alpha_mask(nval,(nlower,nupper))
   if not c:
@@ -536,7 +541,7 @@ def process_carrier_line(line):
   hcpc = cols[2]
   amount = cols[3].strip()
   category = carrier_categorizer_by_hcpc(hcpc)
-  print ','.join([pid,claim,hcpc,amount,'"{0}"'.format(category)])
+  print(','.join([pid,claim,hcpc,amount,'"{0}"'.format(category)]) )
 
 def process_outpatient_line(line):
   cols = line.split(',')
@@ -545,7 +550,7 @@ def process_outpatient_line(line):
   amount = cols[2]
   hcpc = cols[3].strip()
   category = outpatient_categorizer_by_hcpc(hcpc)
-  print ','.join([pid,claim,amount,hcpc,'"{0}"'.format(category)])
+  print(','.join([pid,claim,amount,hcpc,'"{0}"'.format(category)]))
 
 def process_inpatient_line(line):
   cols = line.split(',')
@@ -555,7 +560,7 @@ def process_inpatient_line(line):
   drg = cols[3].strip()
   mdc_category = inpatient_mdc_category_by_drg(drg)
   inpatient_service_category = inpatient_service_category_by_drg(drg)
-  print ','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)])
+  print(','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)]))
 
 def run_outpatient():
   file = open('test/data/outpatient-hcpc.csv', 'r')
@@ -577,11 +582,11 @@ def run_carrier():
 #run_inpatient()
 
 def test():
-  print carrier_categorizer_by_hcpc("0016T"), " and should be Surgery"
-  print carrier_categorizer_by_hcpc("00100"), " and should be Anesthesia"
-  print carrier_categorizer_by_hcpc("R0076"), " and should be Radiology"
-  print 'look_for_alpha_mask("01",("A0","A2"))" ----- >', look_for_alpha_mask("01",("A0","A2"))
-  print 'look_for_alpha_mask("A1",("A0","A2")) ----- >',look_for_alpha_mask("A1",("A0","A2")) 
-  print 'look_for_alpha_mask("A1Z",("A0Z","A2Z")) ----- >',look_for_alpha_mask("A1Z",("A0Z","A2Z")) 
-  print 'look_for_alpha_mask("A100Z",("A000Z","A222Z")) ----- >',look_for_alpha_mask("A100Z",("A000Z","A222Z"))
-  print 'is_in_range("12",("1","201")) -->' ,is_in_range("12",("1","201"))
+  print(carrier_categorizer_by_hcpc("0016T"), " and should be Surgery")
+  print(carrier_categorizer_by_hcpc("00100"), " and should be Anesthesia")
+  print(carrier_categorizer_by_hcpc("R0076"), " and should be Radiology")
+  print('look_for_alpha_mask("01",("A0","A2"))" ----- >', look_for_alpha_mask("01",("A0","A2")))
+  print('look_for_alpha_mask("A1",("A0","A2")) ----- >',look_for_alpha_mask("A1",("A0","A2")) )
+  print('look_for_alpha_mask("A1Z",("A0Z","A2Z")) ----- >',look_for_alpha_mask("A1Z",("A0Z","A2Z")) )
+  print('look_for_alpha_mask("A100Z",("A000Z","A222Z")) ----- >',look_for_alpha_mask("A100Z",("A000Z","A222Z")))
+  print('is_in_range("12",("1","201")) -->' ,is_in_range("12",("1","201")))
