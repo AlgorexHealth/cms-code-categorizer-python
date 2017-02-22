@@ -46,15 +46,10 @@ def look_for_alpha_mask(val,lowerupper):
 
 def normalize_val_and_ranges(val,lowerupper):
   (lower,upper) = lowerupper
-  def make_char(l,v,u):
-    l = '0' if l==None else l
-    u = '0' if u==None else u
-    v = '0' if v==None else v
-    return (l,v,u)   
-  zs = map(make_char,
+  zs = itertools.zip_longest(
             reversed(lower),
             reversed(val),
-            reversed(upper))
+            reversed(upper),fillvalue='0')
   newlower,newval,newupper = arr_of_t_to_tuple_of_a(reversed(list(zs)))
   return newval,(newlower,newupper)
 
