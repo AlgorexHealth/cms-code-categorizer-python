@@ -1,3 +1,6 @@
+import functools as ft
+import itertools as itertools
+
 def arr_of_t_to_tuple_of_a(smaller):
   def r(first,second):
     (ls,vs,us) = first
@@ -6,7 +9,7 @@ def arr_of_t_to_tuple_of_a(smaller):
     vs.append(v)
     us.append(u)
     return (ls,vs,us)
-  ret = reduce(r,smaller,([],[],[]))
+  ret = ft.reduce(r,smaller,([],[],[]))
   return ret
 
 def look_for_alpha_mask(val,lowerupper):
@@ -23,7 +26,7 @@ def look_for_alpha_mask(val,lowerupper):
     else:
       return True
   does_val_fit = filter(lambda x: not x,map(f,lower,val,upper))
-  if len(does_val_fit) > 0:
+  if len(list(does_val_fit)) > 0:
     # and here is where we "kick out"
     return (False,(lower,val,upper))  
 
@@ -52,7 +55,7 @@ def normalize_val_and_ranges(val,lowerupper):
             reversed(lower),
             reversed(val),
             reversed(upper))
-  newlower,newval,newupper = arr_of_t_to_tuple_of_a(reversed(zs))
+  newlower,newval,newupper = arr_of_t_to_tuple_of_a(reversed(list(zs)))
   return newval,(newlower,newupper)
 
 # we assume that all three arguments are 5 in length
@@ -66,7 +69,7 @@ def is_in_range(val,lowerupper):
   (c,(newlower,newval,newupper)) = look_for_alpha_mask(nval,(nlower,nupper))
   if not c:
     return False 
-  zs = map( None,
+  zs = itertools.zip_longest(
             newlower,
             newval,
             newupper)
