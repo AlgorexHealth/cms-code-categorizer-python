@@ -28,7 +28,7 @@ The rules by which these categories are established can be found in many publica
 
 ### Source(s)
 Our current source for this library is: 
-  * **HCIC Source**:  [Health Care Cost and Utilization Report: 2011](http://www.healthcostinstitute.org/files/HCCI_HCCUR2011.pdf)
+  * **HCIC Source**:  [Health Care Cost and Utilization Report: 2011](http://www.healthcostinstitute.org/files/HCCI_HCCUR2011_Methodology.pdf)
 
 ### Mapping Type
 Currently we support:
@@ -75,7 +75,7 @@ The above snippet of code will return the category `Surgery` (as a string) as pe
 ## Lower level API and Creating and Contributing your own Mapping
 If you have your own mappings you want to create, then there are lower-level APIs that may be of use to you.
 
-In the below snapshot, taken from [Health Care Cost and Utilization Report: 2011](http://www.healthcostinstitute.org/files/HCCI_HCCUR2011.pdf), you can see the definition of the category 'Other Professional Services' (in blue) includes both individual HCPC codes (in green) and HCPC ranges (in yellow).  
+In the below snapshot, taken from [Health Care Cost and Utilization Report: 2011](http://www.healthcostinstitute.org/files/HCCI_HCCUR2011_Methodology.pdf), you can see the definition of the category 'Other Professional Services' (in blue) includes both individual HCPC codes (in green) and HCPC ranges (in yellow).  
 
 This highlights the nature of most mappings, and is the key to creating your own categorizer function.
 
