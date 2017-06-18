@@ -1,16 +1,31 @@
 import functools as ft
 import itertools as itertools
 
+def r(first,second):
+  (ls,vs,us) = first
+  (l,v,u) = second
+  ls.append(l)
+  vs.append(v)
+  us.append(u)
+  return (ls,vs,us)
+
 def arr_of_t_to_tuple_of_a(smaller):
-  def r(first,second):
-    (ls,vs,us) = first
-    (l,v,u) = second
-    ls.append(l)
-    vs.append(v)
-    us.append(u)
-    return (ls,vs,us)
   ret = ft.reduce(r,smaller,([],[],[]))
   return ret
+
+def f(l,v,u):
+  if l.isalpha() and u.isalpha():
+    return l==v==u
+  elif v.isalpha() and not l.isalpha() and not u.isalpha():
+    return False
+  else:
+    return True
+
+def c(l,v,u):
+  if l.isalpha() and v.isalpha() and u.isalpha():
+    return False
+  else:
+    return (l,v,u)
 
 def look_for_alpha_mask(val,lowerupper):
   (lower,upper) = lowerupper
@@ -18,13 +33,6 @@ def look_for_alpha_mask(val,lowerupper):
   # the alpha lower/upper bounds. As an example:
   #  v= "10000" will be kicked out of a range of
   #     l="A1000" and u="A99999"
-  def f(l,v,u):
-    if l.isalpha() and u.isalpha():
-      return l==v==u
-    elif v.isalpha() and not l.isalpha() and not u.isalpha():
-      return False
-    else:
-      return True
   does_val_fit = filter(lambda x: not x,map(f,lower,val,upper))
   if len(list(does_val_fit)) > 0:
     # and here is where we "kick out"
@@ -35,11 +43,6 @@ def look_for_alpha_mask(val,lowerupper):
   #  As an example,  Z063PP as value possibly between
   #   Z003PP and Z903PP
   # will return the question: "Is 063 between 003 and 903?"
-  def c(l,v,u):
-    if l.isalpha() and v.isalpha() and u.isalpha():
-      return False
-    else:
-      return (l,v,u)
   smaller = filter(None,map(c,lower,val,upper))
   newlower,newval,newupper = arr_of_t_to_tuple_of_a(smaller)
   return (True,(newlower,newval,newupper))  
@@ -520,11 +523,21 @@ def outpatient_categorizer_by_hcpc(hcpc):
   return f(hcpc)
 
 def categorizer_by_rules(rules):
+  category_by_code = {}
+  ranges_to_category = {}
+  for (category,codes,ranges) in ccr(rules):
+     for c in codes:
+        category_by_code[c] = category
+     for (l,u) in ranges:
+        category_by_code[l] = category
+        category_by_code[u] = category
+     for r in ranges:
+        ranges_to_category[r] = category
   def actual_categorizer(code):
-    def matcher(ranges,codes):
-      return (code in codes) or is_in_ranges(code,ranges) 
-    for (category,codes,ranges) in ccr(rules):
-      if matcher(ranges,codes):
+    if code in category_by_code:
+      return category_by_code[code]
+    for wrange,category in ranges_to_category.items():
+      if is_in_range(code,wrange):
         return category
     return "NOTFOUND"
   return actual_categorizer
@@ -588,3 +601,7 @@ def test():
   print('look_for_alpha_mask("A1Z",("A0Z","A2Z")) ----- >',look_for_alpha_mask("A1Z",("A0Z","A2Z")) )
   print('look_for_alpha_mask("A100Z",("A000Z","A222Z")) ----- >',look_for_alpha_mask("A100Z",("A000Z","A222Z")))
   print('is_in_range("12",("1","201")) -->' ,is_in_range("12",("1","201")))
+
+
+if __name__ == "__main__": 
+  test()
