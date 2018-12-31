@@ -1,4 +1,5 @@
 import functools as ft
+import sys
 import itertools as itertools
 
 def r(first,second):
@@ -517,6 +518,7 @@ def carrier_categorizer_by_hcpc(hcpc):
   return f(hcpc)
 
 def outpatient_categorizer_by_hcpc(hcpc):
+  sys.stdout.write(".")
   if len(hcpc) != 5:
     return "BADHCPCCODE"
   f = categorizer_by_rules(master_outpatient_rules_dictionary)
