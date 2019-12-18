@@ -518,7 +518,7 @@ def carrier_categorizer_by_hcpc(hcpc):
   return f(hcpc)
 
 def outpatient_categorizer_by_hcpc(hcpc):
-  sys.stdout.write(".")
+  #sys.stdout.write(".")
   if len(hcpc) != 5:
     return "BADHCPCCODE"
   f = categorizer_by_rules(master_outpatient_rules_dictionary)
@@ -554,7 +554,7 @@ def process_carrier_line(line):
   hcpc = cols[2]
   amount = cols[3].strip()
   category = carrier_categorizer_by_hcpc(hcpc)
-  print(','.join([pid,claim,hcpc,amount,'"{0}"'.format(category)]) )
+  #print(','.join([pid,claim,hcpc,amount,'"{0}"'.format(category)]) )
 
 def process_outpatient_line(line):
   cols = line.split(',')
@@ -563,7 +563,7 @@ def process_outpatient_line(line):
   amount = cols[2]
   hcpc = cols[3].strip()
   category = outpatient_categorizer_by_hcpc(hcpc)
-  print(','.join([pid,claim,amount,hcpc,'"{0}"'.format(category)]))
+  #print(','.join([pid,claim,amount,hcpc,'"{0}"'.format(category)]))
 
 def process_inpatient_line(line):
   cols = line.split(',')
@@ -573,7 +573,7 @@ def process_inpatient_line(line):
   drg = cols[3].strip()
   mdc_category = inpatient_mdc_category_by_drg(drg)
   inpatient_service_category = inpatient_service_category_by_drg(drg)
-  print(','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)]))
+  #print(','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)]))
 
 def run_outpatient():
   file = open('test/data/outpatient-hcpc.csv', 'r')
