@@ -279,9 +279,109 @@ master_carrier_rules_dictionary = [
   'code_ranges': [("95004","95075"),( "95115","95199")]
   },
   {
-  'category' : "Anesthesia",
+  'category' : "Anesthesia: Head",
   'individual_codes':  [],
-  'code_ranges': [("00100","02020"),( "99100","99140")]
+  'code_ranges': [("00100","00222")]
+  },
+    {
+  'category' : "Anesthesia: Neck",
+  'individual_codes':  [],
+  'code_ranges': [("00300","00352")]
+  },
+    {
+  'category' : "Anesthesia: Thorax",
+  'individual_codes':  [],
+  'code_ranges': [("00400","00474")]
+  },
+    {
+  'category' : "Anesthesia: Intrathoracic",
+  'individual_codes':  [],
+  'code_ranges': [("00500","00580")]
+  },
+    {
+  'category' : "Anesthesia: Spine and Spinal Cord",
+  'individual_codes':  [],
+  'code_ranges': [("00600","00670")]
+  },
+    {
+  'category' : "Anesthesia: Upper Abdomen",
+  'individual_codes':  [],
+  'code_ranges': [("00700","00797")]
+  },
+    {
+  'category' : "Anesthesia: Lower Abdomen",
+  'individual_codes':  [],
+  'code_ranges': [("00800","00882")]
+  },
+    {
+  'category' : "Anesthesia: Perineum",
+  'individual_codes':  [],
+  'code_ranges': [("00902","00952")]
+  },
+    {
+  'category' : "Anesthesia: Pelvis Except Hip",
+  'individual_codes':  [],
+  'code_ranges': [("01112","0110")]
+  },
+    {
+  'category' : "Anesthesia: Upper Leg Except Knee",
+  'individual_codes':  [],
+  'code_ranges': [("01200","01274")]
+  },
+    {
+  'category' : "Anesthesia: Knee and Popliteal Area",
+  'individual_codes':  [],
+  'code_ranges': [("01320","01444")]
+  },
+    {
+  'category' : "Anesthesia: Lower Leg",
+  'individual_codes':  [],
+  'code_ranges': [("01462","01522")]
+  },
+    {
+  'category' : "Anesthesia: Shoulder and Axillary",
+  'individual_codes':  [],
+  'code_ranges': [("01610", "01682")]
+  },
+      {
+  'category' : "Anesthesia: Upper Arm and Elbow",
+  'individual_codes':  [],
+  'code_ranges': [("01710", "01782")]
+  },
+      {
+  'category' : "Anesthesia: Forearm, Wrist and Hand",
+  'individual_codes':  [],
+  'code_ranges': [("01810", "01860")]
+  },
+      {
+  'category' : "Anesthesia: Radiological Procedures",
+  'individual_codes':  [],
+  'code_ranges': [("01916", "01936")]
+  },
+      {
+  'category' : "Anesthesia: Burn Excisions or Debridement",
+  'individual_codes':  [],
+  'code_ranges': [("01951", "01953")]
+  },
+      {
+  'category' : "Anesthesia: Obstetric",
+  'individual_codes':  [],
+  'code_ranges': [("01958", "01969")]
+  },
+      {
+  'category' : "Anesthesia: Other Procedures",
+  'individual_codes':  [],
+  'code_ranges': [("01990", "01999")]
+  },
+    {
+  'category' : "Anesthesia: Qualifying circumstances for anesthesia",
+  'individual_codes':  [],
+  'code_ranges': [("99100", "99140")]
+  },
+    {
+  'category' : "Anesthesia: Moderate (conscious) Sedation",
+  'individual_codes':  [],
+  'code_ranges': [("99143", "99150")]
   },
   {
   'category' : "Cardiovascular",
@@ -298,22 +398,157 @@ master_carrier_rules_dictionary = [
   'individual_codes':  [],
   'code_ranges': [("99281","99292"),( "99466","99476")]
   },
-  {
-  'category' : "Immunizations/Injections",
+    {
+  'category' : "Medicine: Immune Globulins, Serum or Recombinant Prods",
   'individual_codes':  [],
-  'code_ranges': [("90281","90749"),( "96360","96379"),( "G0008","G0010")]
+  'code_ranges': [("90281","90399")]
+  },
+  {
+  'category' : "Nursing Facility Services",
+  'individual_codes':  [],
+  'code_ranges': [("99304","99318")]
+  },
+    {
+  'category' : "Domiciliary, rest home (boarding home) or custodial care services",
+  'individual_codes':  [],
+  'code_ranges': [("99324","99337")]
+  },
+    {
+  'category' : "Domiciliary, rest home (assisted living facility), or home care plan oversight services	",
+  'individual_codes':  [],
+  'code_ranges': [("99339","99340")]
+  },
+    {
+  'category' : "Medicine: Immunization Administration for vaccines/toxoids",
+  'individual_codes':  [],
+  'code_ranges': [("90465","90474")]
+  },
+    {
+  'category' : "Medicine: Vaccines, Toxoids",
+  'individual_codes':  [],
+  'code_ranges': [("90476","90749")]
+  },
+    {
+  'category' : "Medicine: Dialysis",
+  'individual_codes':  [],
+  'code_ranges': [("90935","90999")]
+  },
+    {
+  'category' : "Medicine: Gastroenterology",
+  'individual_codes':  [],
+  'code_ranges': [("91000","91299")]
+  },
+    {
+  'category' : "Medicine: Special Otorhinolaryngological Services",
+  'individual_codes':  [],
+  'code_ranges': [("92502","92700")]
+  },
+    {
+  'category' : "Medicine: Noninvasive Vascular Diagnostic Studies",
+  'individual_codes':  [],
+  'code_ranges': [("93875","93990")]
+  },
+    {
+  'category' : "Medicine: Pulmonary",
+  'individual_codes':  [],
+  'code_ranges': [("94002","90999")]
+  },
+   {
+  'category' : "Medicine: Endocrinology",
+  'individual_codes':  [],
+  'code_ranges': [("95250","95251")]
+  },
+    {
+  'category' : "Medicine: Neurology and Neuromuscular Procedures",
+  'individual_codes':  [],
+  'code_ranges': [("95803","96020")]
+  },
+    {
+  'category' : "Medicine: Central Nervous System Assessments",
+  'individual_codes':  [],
+  'code_ranges': [("96101","96125")]
+  },
+    {
+  'category' : "Medicine: Health and Behavior Assessment",
+  'individual_codes':  [],
+  'code_ranges': [("96150","96155")]
+  },
+    {
+  'category' : "Medicine: hydration, therapeutic, prophylactic, diagnostic injections and infusions, and chemotherapy and other highly complex drug or highly complex biologic agent administration",
+  'individual_codes':  [],
+  'code_ranges': [("96360","96549")]
+  },
+    {
+  'category' : "Medicine: Photodynamic Therapy",
+  'individual_codes':  [],
+  'code_ranges': [("96567","96571")]
+  },
+    {
+  'category' : "Medicine: Special Dermatological Procedures",
+  'individual_codes':  [],
+  'code_ranges': [("96900","96999")]
+  },
+    {
+  'category' : "Medicine: Medical Nutrition Therapy",
+  'individual_codes':  [],
+  'code_ranges': [("97802","97804")]
+  },
+    {
+  'category' : "Medicine: Acupuncture",
+  'individual_codes':  [],
+  'code_ranges': [("97810","97814")]
+  },
+    {
+  'category' : "Medicine: Osteopathic Manipulative Treatment",
+  'individual_codes':  [],
+  'code_ranges': [("98925","98929")]
+  },
+    {
+  'category' : "Medicine: Chiropractic Manipulative Treatment",
+  'individual_codes':  [],
+  'code_ranges': [("98940","98943")]
+  },
+    {
+  'category' : "Medicine: Education and training for patient self-managment",
+  'individual_codes':  [],
+  'code_ranges': [("98960","98962")]
+  },
+    {
+  'category' : "Medicine: Non-face-to-face nonphysician services",
+  'individual_codes':  [],
+  'code_ranges': [("98966","98969")]
+  },
+    {
+  'category' : "Medicine: Special Services, Procedures and Reports",
+  'individual_codes':  [],
+  'code_ranges': [("99000","99091")]
+  },
+    {
+  'category' : "Medicine: Other Services and Procedures",
+  'individual_codes':  [],
+  'code_ranges': [("99170","99199")]
   },
   {
   'category' : "Inpatient Visits",
   'individual_codes': [( "99477")],
-  'code_ranges': [("99217","99239"),( "99304","99340"),( "99478","99480")]
+  'code_ranges': [("99217","99239")]
   },
   {
   'category' : "Office Visits",
   'individual_codes':  [],
-  'code_ranges': [("99201","99215"),( "99341","99350")]
+  'code_ranges': [("99201","99215")]
   },
-  {
+    {
+  'category' : "Home Health Services",
+  'individual_codes':  [],
+  'code_ranges': [( "99341","99350")]
+  },
+   {
+  'category' : "Prolonged Services",
+  'individual_codes':  [],
+  'code_ranges': [( "99354","99360")]
+  },
+   {
   'category' : "Ophthalmology",
   'individual_codes':  [],
   'code_ranges': [("92002","92499"),( "V2020","V2799")]
@@ -331,7 +566,12 @@ master_carrier_rules_dictionary = [
   {
   'category' : "Preventive Visits",
   'individual_codes':  [],
-  'code_ranges': [("99381","99387"),( "99391","99429"),( "99460","99464")]
+  'code_ranges': [("99381","99387"),( "99391","99429")]
+  },
+    {
+  'category' : "Newborn Care Services",
+  'individual_codes':  [],
+  'code_ranges': [("99460","99465")]
   },
   {
   'category' : "Psychiatry & Biofeedback",
@@ -341,12 +581,107 @@ master_carrier_rules_dictionary = [
   {
   'category' : "Radiology",
   'individual_codes':  [],
-  'code_ranges': [("70010","79999"),( "R0070","R0076")]
+  'code_ranges': [( "R0070","R0076")]
   },
   {
-  'category' : "Surgery",
+  'category' : "Surgery: General",
   'individual_codes':  [],
-  'code_ranges' : [("10021","36414"),("36417","69990"),("0016T","0222T")]
+  'code_ranges' : [("10000","10022")]
+  },
+    {
+  'category' : "Surgery: Integumentary System",
+  'individual_codes':  [],
+  'code_ranges' : [("10040","19499")]
+  },
+    {
+  'category' : "Surgery: Musculoskeletal System",
+  'individual_codes':  [],
+  'code_ranges' : [("20000","29999")]
+  },
+    {
+  'category' : "Surgery: Respiratory System",
+  'individual_codes':  [],
+  'code_ranges' : [("30000","32999")]
+  },
+    {
+  'category' : "Surgery: Cardiovascular System",
+  'individual_codes':  [],
+  'code_ranges' : [("33020","37799")]
+  },
+    {
+  'category' : "Surgery: Hemic and Lymphatic Systems",
+  'individual_codes':  [],
+  'code_ranges' : [("38100","38999")]
+  },
+    {
+  'category' : "Surgery: Mediastinum and Diaphragm",
+  'individual_codes':  [],
+  'code_ranges' : [("39000","39599")]
+  },
+    {
+  'category' : "Surgery: Digestive System",
+  'individual_codes':  [],
+  'code_ranges' : [("40490","49999")]
+  },
+    {
+  'category' : "Surgery: Urinary System",
+  'individual_codes':  [],
+  'code_ranges' : [("50010","53899")]
+  },
+    {
+  'category' : "Surgery: Male Genital System",
+  'individual_codes':  [],
+  'code_ranges' : [("54000","55899")]
+  },
+    {
+  'category' : "Surgery: Reproductive System and Intersex",
+  'individual_codes':  [],
+  'code_ranges' : [("55920","55980")]
+  },
+    {
+  'category' : "Surgery: Female Genital System",
+  'individual_codes':  [],
+  'code_ranges' : [("56405","58999")]
+  },
+    {
+  'category' : "Surgery: Maternity Care and Delivery",
+  'individual_codes':  [],
+  'code_ranges' : [("59000","55980")]
+  },
+    {
+  'category' : "Surgery: Endocrine System",
+  'individual_codes':  [],
+  'code_ranges' : [("60000","60699")]
+  },
+    {
+  'category' : "Surgery: Nervous System",
+  'individual_codes':  [],
+  'code_ranges' : [("61000","64999")]
+  },
+    {
+  'category' : "Surgery: Eye and Ocular Adnexa",
+  'individual_codes':  [],
+  'code_ranges' : [("65091","68899")]
+  },
+    {
+  'category' : "Surgery: Auditory System",
+  'individual_codes':  [],
+  'code_ranges' : [("69000","69979")]
+  },
+    {
+  'category' : "Anatomic Pathology (postmortem)",
+  'individual_codes':  [],
+  'code_ranges' : [("99363","99368")]
+  },
+    {
+  'category' : "Care plan oversight services",
+  'individual_codes':  [],
+  'code_ranges' : [("99374","99380")]
+  },
+    {
+  'category' : "Complex Chronic Care Coordination Services",
+  'individual_codes':  [],
+  'code_ranges' : [("99487","99489")]
   },
   {
   'category' : "Other Professional Services",
@@ -354,17 +689,9 @@ master_carrier_rules_dictionary = [
   'code_ranges': [("36415","36416"),
                   ( "90935","90999"),
                   ( "91000","91299"),
-                  ( "92502","92700"),
-                  ( "94002", "94799"),
-                  ( "95250","95251"),
                   ( "95803","96125"),
-                  ( "96150","96155"),
                   ( "96401","96571"),
-                  ( "96900","96999"),
-                  ( "98960","99091"),
                   ( "99143","99199"),
-                  ( "99354","99360"),
-                  ( "99363", "99380"),
                   ( "99441","99444"),
                   ( "99450","99456"),
                   ( "99605", "99607"),
@@ -438,7 +765,6 @@ master_outpatient_rules_dictionary = [
                     ( "90801","90899"),
                     ( "90935", "90999"),
                     ( "92626","92633"),
-                    ( "92950","93352"),
                     ( "93600","93799"),
                     ( "97001","98943"),
                     ( "A4651", "A4932"),
@@ -446,55 +772,129 @@ master_outpatient_rules_dictionary = [
                     ( "H0001","H2037")]
   },
   {
-    'category': "Radiology Services",
-    'individual_codes':[ ( "70336"),( "75635"),( "76390"),( "77084")],
-    'code_ranges': [ ("70010","70332"),
-                    ( "70350","70390"),
-                    ( "70450","70498"),
-                    ( "70540","70559"),
-                    ( "71010", "71130"),
-                    ( "72010","72120"),
-                    ( "72170","72190"),
-                    ( "71250","71275"),
-                    ( "71550","71555"),
-                    ( "72125", "72133"),
-                    ( "72141","72159"),
-                    ( "72191","72198"),
-                    ( "72200","73140"),
-                    ( "73200","73206"),
-                    ( "73218", "73225"),
-                    ( "73500","73660"),
-                    ( "73700","73706"),
-                    ( "73718","73725"),
-                    ( "74000","74022"),
-                    ( "74150", "74175"),
-                    ( "74181","74185"),
-                    ( "74190","74775"),
-                    ( "75557","75564"),
-                    ( "75600","75630"),
-                    ( "75650","76350"),
-                    ( "76376","76380"),
-                    ( "76496","76499"),
-                    ( "76506","76999"),
-                    ( "77001", "77003"),
-                    ( "77011","77014"),
-                    ( "77021","77022"),
-                    ( "77031","77059"),
-                    ( "77071","77083"),
-                    ( "77261","77799"),
-                    ( "78000","79999"),
-                    ( "96401", "96571"),
-                    ( "R0070","R0076")]
+    'category': "Radiology Services: Diagnostic Radiology",
+    'individual_codes':[],
+    'code_ranges': [("70000","76499")]
+  },
+    {
+    'category': "Radiology Services: Diagnostic Ultrasound",
+    'individual_codes':[],
+    'code_ranges': [("76500","76999")]
+  },
+    {
+    'category': "Radiology Services: Radiologic Guidance",
+    'individual_codes':[],
+    'code_ranges': [("77001","77032")]
+  },
+    {
+    'category': "Radiology Services: Breast Mammography",
+    'individual_codes':[],
+    'code_ranges': [("77051","77059")]
+  },
+    {
+    'category': "Radiology Services: Bone/Joint Studies",
+    'individual_codes':[],
+    'code_ranges': [("77071","77084")]
+  },
+    {
+    'category': "Radiology Services: Radiation Oncology",
+    'individual_codes':[],
+    'code_ranges': [("77261","77999")]
+  },
+    {
+    'category': "Radiology Services: Nuclear Medicine",
+    'individual_codes':[],
+    'code_ranges': [("78000","79999")]
   },
   {
-    'category': "Lab/Pathology",
-    'individual_codes' : [ "36415", "36416" ],
-    'code_ranges' : [  ("80047","80440"), 
-              ("80500","80502"), 
-              ("81000","88399"), 
-              ("88720","89356"), 
-              ("ATP02","ATP22"), 
-              ("P2028","P9615") ]
+    'category': "Lab/Pathology: Organ or Disease-oriented Panels",
+    'individual_codes' : [],
+    'code_ranges' : [("80000","80076")]
+  },
+    {
+    'category': "Lab/Pathology: Drug Testing",
+    'individual_codes' : [],
+    'code_ranges' : [("80100","80103")]
+  },
+    {
+    'category': "Lab/Pathology: Therapeutic Drug Assays",
+    'individual_codes' : [],
+    'code_ranges' : [("80150","80299")]
+  },
+    {
+    'category': "Lab/Pathology: Evocative/Suppression Testing",
+    'individual_codes' : [],
+    'code_ranges' : [("80400","80440")]
+  },
+    {
+    'category': "Lab/Pathology: Consultations",
+    'individual_codes' : [],
+    'code_ranges' : [("80500","80502")]
+  },
+    {
+    'category': "Lab/Pathology: Urinalysis",
+    'individual_codes' : [],
+    'code_ranges' : [("81000","81099")]
+  },
+    {
+    'category': "Lab/Pathology: Chemistry",
+    'individual_codes' : [],
+    'code_ranges' : [("82000","84999")]
+  },
+    {
+    'category': "Lab/Pathology: Hematology and Coagulation",
+    'individual_codes' : [],
+    'code_ranges' : [("85002","85999")]
+  },
+    {
+    'category': "Lab/Pathology: Immunology",
+    'individual_codes' : [],
+    'code_ranges' : [("86000","86849")]
+  },
+    {
+    'category': "Lab/Pathology: Transfusion Medicine",
+    'individual_codes' : [],
+    'code_ranges' : [("86850","86849")]
+  },
+    {
+    'category': "Lab/Pathology: Microbiology",
+    'individual_codes' : [],
+    'code_ranges' : [("87001","87999")]
+  },
+    {
+    'category': "Lab/Pathology: Anatomic Pathology (postmortem)",
+    'individual_codes' : [],
+    'code_ranges' : [("88000","88099")]
+  },
+    {
+    'category': "Lab/Pathology: Cytopathology",
+    'individual_codes' : [],
+    'code_ranges' : [("88194","88199")]
+  },
+    {
+    'category': "Lab/Pathology: Cytogenetic Studies",
+    'individual_codes' : [],
+    'code_ranges' : [("88230","88299")]
+  },
+    {
+    'category': "Lab/Pathology: Surgical Pathology",
+    'individual_codes' : [],
+    'code_ranges' : [("88300","88399")]
+  },
+    {
+    'category': "Lab/Pathology: In Vivo Lab Procedures",
+    'individual_codes' : [],
+    'code_ranges' : [("88720","88741")]
+  },
+    {
+    'category': "Lab/Pathology: Other Procedures",
+    'individual_codes' : [],
+    'code_ranges' : [("89049","89240")]
+  },
+    {
+    'category': "Lab/Pathology: Reproductive Medicine Procedures",
+    'individual_codes' : [],
+    'code_ranges' : [("89250","89398")]
   }
 ]
 ################################################################################
@@ -554,7 +954,7 @@ def process_carrier_line(line):
   hcpc = cols[2]
   amount = cols[3].strip()
   category = carrier_categorizer_by_hcpc(hcpc)
-  #print(','.join([pid,claim,hcpc,amount,'"{0}"'.format(category)]) )
+  print(','.join([pid,claim,hcpc,amount,'"{0}"'.format(category)]) )
 
 def process_outpatient_line(line):
   cols = line.split(',')
@@ -563,7 +963,7 @@ def process_outpatient_line(line):
   amount = cols[2]
   hcpc = cols[3].strip()
   category = outpatient_categorizer_by_hcpc(hcpc)
-  #print(','.join([pid,claim,amount,hcpc,'"{0}"'.format(category)]))
+  print(','.join([pid,claim,amount,hcpc,'"{0}"'.format(category)]))
 
 def process_inpatient_line(line):
   cols = line.split(',')
@@ -573,7 +973,7 @@ def process_inpatient_line(line):
   drg = cols[3].strip()
   mdc_category = inpatient_mdc_category_by_drg(drg)
   inpatient_service_category = inpatient_service_category_by_drg(drg)
-  #print(','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)]))
+  print(','.join([pid,claim,amount,drg,'"{0}"'.format(mdc_category),'"{0}"'.format(inpatient_service_category)]))
 
 def run_outpatient():
   file = open('test/data/outpatient-hcpc.csv', 'r')
