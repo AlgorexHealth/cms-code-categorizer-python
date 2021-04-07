@@ -296,7 +296,7 @@ master_carrier_rules_dictionary = [
   {
   'category' : "Emergency Room/Critical Care",
   'individual_codes':  [],
-  'code_ranges': [("99281","99292"),( "99466","99476")]
+  'code_ranges': [("99281","99292")]
   },
   {
   'category' : "Immunizations/Injections",
@@ -394,7 +394,7 @@ master_outpatient_rules_dictionary = [
   {
     'category' : "Emergency Room",
     'individual_codes':  [],
-    'code_ranges': [("99281","99292"), ("99466","99476")]
+    'code_ranges': [("99281","99292")]
   },
   {
     'category': "Outpatient Surgery",
